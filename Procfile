@@ -1,0 +1,1 @@
+web: gunicorn sofap.wsgi --log-file -

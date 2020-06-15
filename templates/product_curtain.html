@@ -1,0 +1,29 @@
+<style>
+	.pic{
+		max-width: 100%;
+		max-height:100%;
+		margin: 0 auto;
+		border-radius: 3%;
+	}
+</style>
+
+
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% include 'nav_product.html' %}
+
+	<div class="container-fluid" align=center>
+		<div class="row">
+			{% for p in pic %}
+				<div class="col-sm-4 mb-2">
+					<img class="pic" src="{{ p.curtain.url }}">
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+{% endblock %}
