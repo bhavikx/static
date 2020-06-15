@@ -25,7 +25,7 @@ SECRET_KEY = '6y_enk!o5txynoq!wgr_=2r#@lf^irue)cy77!zy7fdk6%d7ne'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['srsofa.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['ssofa.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'TEST_DB',
         'USER' : 'postgres',
         'PASSWORD' : 'pdb988',
-        'HOST' : 'localhost',
+        'HOST' : 'ssofa.herokuapp.com',
         'post' : '5432' 
     }
 }
