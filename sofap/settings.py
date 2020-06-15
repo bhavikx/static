@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6y_enk!o5txynoq!wgr_=2r#@lf^irue)cy77!zy7fdk6%d7ne'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['ssofa.herokuapp.com', '127.0.0.1']
 
@@ -77,17 +77,28 @@ WSGI_APPLICATION = 'sofap.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
+"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'TEST_DB',
         'USER' : 'postgres',
         'PASSWORD' : 'pdb988',
-        'HOST' : 'localhost',
+        'HOST' : 'localhost, srsofa.herokuapp.com',
         'post' : '5432' 
+    }
+}"""
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+import dj_database_url
+
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
