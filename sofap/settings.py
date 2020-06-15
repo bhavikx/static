@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'TEST_DB',
         'USER' : 'postgres',
         'PASSWORD' : 'pdb988',
-        'HOST' : 'ssofa.herokuapp.com',
+        'HOST' : 'localhost',
         'post' : '5432' 
     }
 }
