@@ -34,4 +34,5 @@ twilio==6.40.0
 urllib3==1.25.9
 virtualenv==16.7.7
 virtualenvwrapper-win==1.2.5
+whitenoise==5.1.0
 wrapt==1.11.2
